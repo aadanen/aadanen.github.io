@@ -1,0 +1,4 @@
+
+  background: url("img/test_border_sheet.png") 480px;
+  animation: button_play 0.8s steps(3);
+  animation-fill-mode: both;
