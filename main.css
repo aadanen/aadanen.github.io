@@ -62,3 +62,72 @@ p {
 
 
 }
+.menu_item {
+  box-sizing: border-box;
+
+  font-size: 2rem;
+  text-align: center;
+  line-height: 80px;
+  margin: 2rem;
+
+  text-decoration: none;
+  color: white;
+  background: url("img/test_border.png");
+  position: relative;
+
+  background-color: black;
+
+}
+
+.menu_item, .menu_item a {
+  width: 480px;
+  height: 80px;
+}
+
+.menu_item a {
+  display: inline-block;
+
+  opacity: 0;
+  transition: opacity 1s, transform 1s;
+
+  background: url("img/test_border_sheet.png") 480px;
+  animation: button_reverse 0.8s steps(3);
+  animation-fill-mode: both;
+}
+
+.menu_item a:visited {
+    color: white;  
+}
+
+
+@keyframes button_play {
+  100% { background-position: 1920px; }
+  0% { background-position: 480px; }
+}
+
+@keyframes button_reverse {
+  100% { background-position: 480px; }
+  0% { background-position: 1920px; }
+}
+
+.menu_item a:hover {
+  opacity: 1;
+  animation: button_play 0.8s steps(3);
+  animation-fill-mode: both;
+}
+.menu_item a:active {
+    color: black;
+}
+
+.menu_item p {
+  position: absolute;
+  z-index: -1;
+
+  height: 100%;
+  width: 100%;
+
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
