@@ -1,3 +1,11 @@
+:root {
+  --bg1-color: #f1f0eb;
+  --text1-color: #2e211b;
+  --text2-color: #a52a2a;
+  --red1-color: #a52a2a;
+  --green1-color: #6b9362;
+}
+
 html {
   width: 100vw;
   height: 100vh;
@@ -15,8 +23,8 @@ body {
   flex-direction: column;
   
 
-  background-color: #f1f0eb;
-  color: #2e211b;
+  background-color: var(--bg1-color);
+  color: var(--text1-color);
   justify-content: space-between;
 }
 
@@ -25,20 +33,20 @@ body {
 
 
 .navbar {
-  background-color: #f1f0eb;
+  background-color: var(--bg1-color);
   z-index: 3;
 
 }
 
 a { 
-  color: #2e211b;
+  color: var(--text1-color);
   text-decoration: none;
   font-weight: bold;
 }
 
 a:hover {
-  color: #6b9362;
-  border-color: #6b9362;
+  color: var(--text2-color);
+  border-color: var(--text2-color);
 }
 
 .navbar a {
@@ -59,23 +67,22 @@ a:hover {
 }
 
 .art1 {
-  border: 1px red solid;
+  border: 1px var(--red1-color) solid;
   border-radius: 100%;
   height: 60%;
   aspect-ratio: 1/1;
 
   position: absolute;
   left: 30%;
-  top: 40%;
+  top: 39%;
 
 }
 .art2 {
-  background-color: red;
-  height: 80%;
+  background-color: var(--red1-color);
+  height: calc(100% - 6rem);
   width: 4rem;
   position: absolute;
-  left: 90%;
-  bottom: 4rem;
+  right: 0px;
 }
 
 .primary_card {
@@ -89,8 +96,8 @@ a:hover {
   aspect-ratio: 1.618/1;
   box-sizing: border-box;
 
-  border: 1px solid #2e211b;
-  background-color: #f1f0eb;
+  border: 1px solid var(--text1-color);
+  background-color: var(--bg1-color);
 
   display: flex;
   flex-direction: column;
@@ -107,20 +114,24 @@ a:hover {
   font-size: 3rem;
 }
 
-.container, .projects_container {
+.container, .projects_container, .article_container {
   border-top: 1px solid;
   border-bottom: 1px solid;
   flex-grow: 1;
 }
 
-.projects_container { 
+article {
+  width: 40rem;
+  overflow: scroll;
+  line-height: 2rem;
+}
+
+.projects_container, .article_container { 
   overflow: scroll;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-
 }
 .project-card {
     margin: 1rem 0 1rem 0;
@@ -128,7 +139,7 @@ a:hover {
     width: 80vw;
     max-width: 45rem;
     display: block;
-    border: 1px solid #2e211b;
+    border: 1px solid var(--text1-color);
     text-decoration: none;
     color: inherit;
 }
@@ -165,13 +176,17 @@ a:hover {
   margin-left: auto;
   font-weight: bold;
   z-index: 3;
-  background-color: #f1f0eb;
+  background-color: var(--bg1-color);
 }
 
 .footer p, .footer a {
   padding: 1rem;
   margin: 0;
   display: inline-block;
+}
+
+.article {
+  margin
 }
 
 @media (max-width: 550px) {
@@ -181,4 +196,21 @@ a:hover {
   .footer p, .footer a {
     padding: 0.1rem;
   }
+}
+
+@media (max-width: 850px) {
+  .primary_card {
+    margin: 1rem;
+  }
+  .art1 {
+    display: none;
+  }
+  .art2 {
+    display: none;
+  }
+  .container { 
+    align-items: center;
+    justify-content: center;
+  }
+
 }
