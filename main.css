@@ -1,8 +1,8 @@
 html {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
+
 
 body {
   font-size: 16px;
@@ -14,12 +14,20 @@ body {
   display: flex;
   flex-direction: column;
   
-  justify-content: space-between;
 
   background-color: #f1f0eb;
   color: #2e211b;
+  justify-content: space-between;
 }
+
+.indexbody {
+}
+
+
 .navbar {
+  background-color: #f1f0eb;
+  z-index: 3;
+
 }
 
 a { 
@@ -30,6 +38,7 @@ a {
 
 a:hover {
   color: #6b9362;
+  border-color: #6b9362;
 }
 
 .navbar a {
@@ -45,19 +54,43 @@ a:hover {
 
 .container {
   display: flex;
-  justify-content: center;
+  *justify-content: center;
+  *align-items: center;
+}
+
+.art1 {
+  border: 1px red solid;
+  border-radius: 100%;
+  height: 60%;
+  aspect-ratio: 1/1;
+
+  position: absolute;
+  left: 30%;
+  top: 40%;
+
+}
+.art2 {
+  background-color: red;
+  height: 80%;
+  width: 4rem;
+  position: absolute;
+  left: 90%;
+  bottom: 4rem;
 }
 
 .primary_card {
   max-width: 600px;
+  max-height: 400px;
   padding: 1rem;
   margin: 1rem;
+  margin-left: 10rem;
+  margin-top: 8rem;
 
   aspect-ratio: 1.618/1;
   box-sizing: border-box;
 
-  border: 2px solid black;
-  border-radius: 16px;
+  border: 1px solid #2e211b;
+  background-color: #f1f0eb;
 
   display: flex;
   flex-direction: column;
@@ -74,11 +107,65 @@ a:hover {
   font-size: 3rem;
 }
 
+.container, .projects_container {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  flex-grow: 1;
+}
+
+.projects_container { 
+  overflow: scroll;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+.project-card {
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+    width: 80vw;
+    max-width: 45rem;
+    display: block;
+    border: 1px solid #2e211b;
+    text-decoration: none;
+    color: inherit;
+}
+.project-desc {
+    margin: 0;
+}
+
+.project-interior {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-text {
+    width: 80%;
+}
+
+.project-tech {
+    width: 20%;
+    align-self: center;
+}
+
+@media (max-width: 600px) {
+    .project-interior {
+        flex-direction: column;
+    }
+    .project-tech {
+        align-self: flex-start;
+    }
+}
 .footer {
   text-align: right;
   max-width: 1000px;
+
   margin-left: auto;
   font-weight: bold;
+  z-index: 3;
+  background-color: #f1f0eb;
 }
 
 .footer p, .footer a {
@@ -90,5 +177,8 @@ a:hover {
 @media (max-width: 550px) {
   .footer {
     max-width: 200px;
+  }
+  .footer p, .footer a {
+    padding: 0.1rem;
   }
 }
