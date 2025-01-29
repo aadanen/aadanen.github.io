@@ -78,7 +78,7 @@ a:hover {
   position: absolute;
   left: 30%;
   top: 39%;
-  z-index: 4;
+  z-index: 2;
 
 }
 .art2 {
@@ -95,17 +95,20 @@ a:hover {
   margin: 1rem;
   padding: 1rem;
   margin-left: 10rem;
-  margin-top: 8rem;
+  margin-top: 6rem;
 
   aspect-ratio: 1.618/1;
   box-sizing: border-box;
 
-  border: 1px solid var(--text1-color);
   background-color: var(--bg1-color);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.trash {
+  border: 1px solid var(--text1-color);
 }
 
 .primary_card div {
@@ -221,4 +224,15 @@ article {
     justify-content: center;
   }
 
+}
+
+.contact {
+  margin-top: 0rem;
+  margin-left: 16rem;
+  max-height: 0%;
+  z-index: 5;
+}
+
+.contact * {
+  display: block;
 }
