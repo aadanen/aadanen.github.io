@@ -1,8 +1,37 @@
+:root {
+  --bg1-color: #f1f0eb;
+  --text1-color: #2e211b;
+  --text2-color: #a52a2a;
+  --red1-color: #a52a2a;
+  --green1-color: #6b9362;
+}
 body {
   padding: 0;
   margin: 0;
-  background-color: #181926;
+  background-color: #f1f0eb;
 }
+a { 
+  color: var(--text1-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--text2-color);
+  border-color: var(--text2-color);
+}
+
+.navbar a {
+  display: inline-block;
+  height: 3rem;
+  line-height: 3rem;
+  width: 4rem;
+  padding: 1rem;
+
+  text-decoration: none;
+  text-align: center;
+}
+
 #unity-container {
   position: absolute;
 }

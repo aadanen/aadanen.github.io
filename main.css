@@ -9,6 +9,9 @@
 html {
   width: 100vw;
   height: 100vh;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 
@@ -75,6 +78,7 @@ a:hover {
   position: absolute;
   left: 30%;
   top: 39%;
+  z-index: 4;
 
 }
 .art2 {
@@ -88,8 +92,8 @@ a:hover {
 .primary_card {
   max-width: 600px;
   max-height: 400px;
-  padding: 1rem;
   margin: 1rem;
+  padding: 1rem;
   margin-left: 10rem;
   margin-top: 8rem;
 
@@ -110,6 +114,8 @@ a:hover {
 .primary_card h1, .primary_card p {
   margin: 0px;
 }
+.primary_card p {
+}
 .primary_card h1 {
   font-size: 3rem;
 }
@@ -122,6 +128,7 @@ a:hover {
 
 article {
   width: 40rem;
+  padding: 1rem;
   max-width: 100%;
   overflow: scroll;
   line-height: 2rem;
