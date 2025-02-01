@@ -12,6 +12,7 @@ html {
   font-family: futura-pt, sans-serif;
   font-style: normal;
   font-weight: 400;
+  overflow: hidden;
 }
 
 
@@ -68,25 +69,47 @@ a:hover {
   *justify-content: center;
   *align-items: center;
 }
-
-.art1 {
-  border: 1px var(--red1-color) solid;
-  border-radius: 100%;
-  height: 60%;
-  aspect-ratio: 1/1;
-
+.artbox {
   position: absolute;
-  left: 30%;
-  top: 39%;
-  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: perspective(40cm) rotateX(70deg) rotateZ(15deg) translateY(4cm);
 
 }
 .art2 {
   background-color: var(--red1-color);
-  height: calc(100% - 6rem);
-  width: 4rem;
+  height:100%;
+  width: 5rem;
   position: absolute;
   right: 0px;
+}
+.circle {
+  border: 1px var(--red1-color) solid;
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  z-index: 2;
+  opacity: 50%;
+}
+.art1 {
+  height: 700px;
+  right: 10%;
+  bottom: -10%;
+}
+.art3 {
+  height: 700px;
+  right: 60%;
+  bottom: 60%;
+  border-width: 2px;
+
+}
+.art4 {
+  height: 700px;
+  right: 120%;
+  bottom: 120%;
+  border-width: 6px;
 }
 
 .primary_card {
@@ -102,17 +125,16 @@ a:hover {
 
   background-color: var(--bg1-color);
 
+}
+
+.trash {
+  border: 1px solid var(--text1-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.trash {
-  border: 1px solid var(--text1-color);
-}
-
 .primary_card div {
-  height: 30%;
 }
 .primary_card h1, .primary_card p {
   margin: 0px;
@@ -121,11 +143,14 @@ a:hover {
 }
 .primary_card h1 {
   font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.container {
 }
 
 .container, .projects_container, .article_container {
   border-top: 1px solid;
-  border-bottom: 1px solid;
   flex-grow: 1;
 }
 
@@ -144,6 +169,7 @@ article {
   flex-direction: column;
   align-items: center;
 }
+
 .project-card {
     margin: 1rem 0 1rem 0;
     padding: 1rem;
@@ -212,11 +238,9 @@ article {
 @media (max-width: 850px) {
   .primary_card {
     margin: 1rem;
+    min-width: 400px;
   }
-  .art1 {
-    display: none;
-  }
-  .art2 {
+  .art1, .art2, .art3, .art4 {
     display: none;
   }
   .container { 
@@ -227,9 +251,7 @@ article {
 }
 
 .contact {
-  margin-top: 0rem;
-  margin-left: 16rem;
-  max-height: 0%;
+  margin-top: 2rem;
   z-index: 5;
 }
 
