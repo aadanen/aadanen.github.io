@@ -38,7 +38,7 @@ body {
 
 .navbar {
   background-color: var(--bg1-color);
-  z-index: 3;
+  z-index: 6;
 
 }
 
@@ -69,15 +69,6 @@ a:hover {
   *justify-content: center;
   *align-items: center;
 }
-.artbox {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  transform: perspective(40cm) rotateX(70deg) rotateZ(15deg) translateY(4cm);
-
-}
 .art2 {
   background-color: var(--red1-color);
   height:100%;
@@ -90,26 +81,25 @@ a:hover {
   border-radius: 100%;
   aspect-ratio: 1/1;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   opacity: 50%;
 }
 .art1 {
-  height: 700px;
-  right: 10%;
-  bottom: -10%;
+  height: 200px;
+  left: 110px;
+  bottom: 20px;
 }
 .art3 {
-  height: 700px;
-  right: 60%;
-  bottom: 60%;
-  border-width: 2px;
+  height: 400px;
+  left: 350px;
+  bottom: 270px;
+  z-index: 1;
 
 }
 .art4 {
-  height: 700px;
-  right: 120%;
-  bottom: 120%;
-  border-width: 6px;
+  height: 1700px;
+  right: -800px;
+  bottom: 600px;
 }
 
 .primary_card {
@@ -147,6 +137,7 @@ a:hover {
 }
 
 .container {
+  z-index: 3;
 }
 
 .container, .projects_container, .article_container {
@@ -168,6 +159,7 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom: 1px solid var(--text1-color);
 }
 
 .project-card {
@@ -235,19 +227,11 @@ article {
   }
 }
 
-@media (max-width: 850px) {
-  .primary_card {
-    margin: 1rem;
-    min-width: 400px;
-  }
-  .art1, .art2, .art3, .art4 {
+
+@media (max-width: 1200px) {
+  .art4 {
     display: none;
   }
-  .container { 
-    align-items: center;
-    justify-content: center;
-  }
-
 }
 
 .contact {
@@ -257,4 +241,23 @@ article {
 
 .contact * {
   display: block;
+}
+
+@media (max-width: 850px) {
+  .primary_card {
+    margin: 1rem;
+    min-width: 400px;
+  }
+  .art1, .art2, .art3 {
+    display: none;
+  }
+  .art4 {
+    display: block;
+    height: 800px;
+    right: -400px;
+    bottom: -400px;
+  }
+  .container { 
+  }
+
 }
