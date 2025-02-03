@@ -146,10 +146,10 @@ a:hover {
 }
 
 article {
-  width: 40rem;
-  padding: 1rem;
-  max-width: 100%;
-  overflow: scroll;
+  max-width: 40rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  overflow-y: scroll;
   line-height: 2rem;
 }
 
@@ -214,9 +214,6 @@ article {
   display: inline-block;
 }
 
-.article {
-  margin
-}
 
 @media (max-width: 550px) {
   .footer {
