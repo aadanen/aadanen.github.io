@@ -9,6 +9,9 @@ body {
   padding: 0;
   margin: 0;
   background-color: #f1f0eb;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 a { 
   color: var(--text1-color);
@@ -30,6 +33,10 @@ a:hover {
 
   text-decoration: none;
   text-align: center;
+}
+
+.navbar {
+  border-bottom: 1px solid var(text1-color);
 }
 
 #unity-container {
