@@ -190,6 +190,11 @@ article {
     align-self: center;
 }
 
+.project-title {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
 @media (max-width: 600px) {
     .project-interior {
         flex-direction: column;
