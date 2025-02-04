@@ -91,8 +91,8 @@ a:hover {
 }
 .art3 {
   height: 400px;
-  left: 750px;
-  bottom: 195px;
+  right: 600px;
+  bottom: 140px;
   z-index: 1;
 
 }
@@ -233,6 +233,9 @@ article {
 @media (max-width: 1200px) {
   .art4 {
     display: none;
+  }
+  .art3 {
+    right: 100px;
   }
 }
 
