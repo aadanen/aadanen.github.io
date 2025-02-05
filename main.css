@@ -91,7 +91,7 @@ a:hover {
 }
 .art3 {
   height: 400px;
-  right: 600px;
+  right: 30%;
   bottom: 140px;
   z-index: 1;
 
@@ -235,7 +235,7 @@ article {
     display: none;
   }
   .art3 {
-    right: 100px;
+    right: 10%;
   }
 }
 
