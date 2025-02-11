@@ -32,10 +32,6 @@ body {
   justify-content: space-between;
 }
 
-.indexbody {
-}
-
-
 .navbar {
   background-color: var(--bg1-color);
   z-index: 6;
@@ -66,8 +62,6 @@ a:hover {
 
 .container {
   display: flex;
-  *justify-content: center;
-  *align-items: center;
 }
 .art2 {
   background-color: var(--red1-color);
@@ -124,13 +118,10 @@ a:hover {
   justify-content: space-between;
 }
 
-.primary_card div {
-}
 .primary_card h1, .primary_card p {
   margin: 0px;
 }
-.primary_card p {
-}
+
 .primary_card h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
@@ -219,7 +210,6 @@ article {
   display: inline-block;
 }
 
-
 @media (max-width: 550px) {
   .footer {
     max-width: 200px;
@@ -251,18 +241,30 @@ article {
 @media (max-width: 850px) {
   .primary_card {
     margin: 1rem;
-    min-width: 400px;
+    min-width: 328;
+  }
+  .primary_card h1 {
+    font-size: 2rem;
+
   }
   .art1, .art2, .art3 {
     display: none;
   }
   .art4 {
+    position: fixed;
     display: block;
     height: 800px;
     right: -400px;
-    bottom: -400px;
+    top: calc(50% - 3rem);
   }
-  .container { 
-  }
+}
 
+
+@media (max-width: 600px) {
+  .art4 {
+    height: 300px;
+    right: 0px;
+    top: calc(60% - 3rem);
+
+  }
 }
