@@ -8,10 +8,13 @@
     <body class="articlebody">
         <script>0</script>
         <div class="navbar">
-            <a href="../index.html">home</a><a href="../projects.html" style="" >projects</a><a href="" style="color: #a52a2a" >bjet</a>
+            <a href="../index.html">home</a><a href="../projects.html" style="" >projects</a><a href="" style="color: #a52a2a" >bjet_mcmc</a>
         </div>
         <div class="article_container">
         <article>
+            TLDR: I contributed to a decently sized open source project by 
+            adding features, testing computational optimizations, and writing
+            documentation.
             <h3>Why did I do it?</h3>
             I'm currently researching under Dr. Olivier Hervet to improve
             <a href="https://github.com/Ohervet/Bjet_MCMC"
@@ -25,37 +28,35 @@
                 href="https://hummingbird.ucsc.edu/" target="_blank" 
                 rel="noopener noreferrer">
                 Hummingbird Computer Cluster</a> to test 
-            <em>Bjet</em> and gather data on its performance. I've
+            Bjet and gather data on its performance. I've
             written a bunch of python to automate tasks such as extracting and
-            interpreting <em>Bjet's</em> output and creating graphs. I've also
+            interpreting Bjet's output and creating graphs. I've also
             modified the code base to expose previously hidden 
-            details about the proccess for more insight into <em>Bjet's</em>
+            details about the proccess for more insight into Bjet's
             in-practice performance. I then took my results, prepared a 
             presentation, and shared my findings with the UCSC Very High Energy
             Astrophysics Department. I was able to find parameters that reduced
-            runtime by ~20% without impacting accuracy.<br><br>My next task
-            is to build a program that can automatically gather data from
-            many different telescopes. The goal is to be able to anticipate
-            blazar flares so that we can point a telescope at the source and
-            capture the event which only occurs ~1 time per year.
+            runtime by ~20% without impacting accuracy.<br><br>
 
+            I continue to contribute to the Bjet repository on github. I 
+            recently added a feature that fits an exponential decay curve to
+            the convergence of the MCMC process. I also am adding my findings
+            about Bjet's performance to the documentation.
             <h3>What did I learn?</h3>
             The most important thing I'm learning right now is how to deal with
             a large, complex project, that I didn't write myself. Most of my
             programming at school is individual and small scale, so working to
-            augment and improve an existing codebase is a new experience. I've
+            augment and improve an existing codebase is a new experience. 
+            <br><br>
+            I've
             also gotten to practice larger scale software developement, and I
             have been solving different problems then I usually do,
-            like deciding how I am going to organize and structure my code.
-            <br><br> 
-            The biggest challenge I am currently facing is that my code is 
-            actually important. If it fails for some reason and we miss a 
-            flare, we might have to wait years for another oppurtunity. I am 
-            not sure how I am going to deal with that 100% yet, but so far I
-            am taking care to think about possible errors and how I will handle 
-            them. I also am working on writing unit tests for the more 
-            complicated parts of my program, and I am planning to develop a 
-            debugging mode that will help me run end to end tests.
+            like deciding how I am going to organize and structure my code. 
+            This is because I wasn't just making a few graphs, but building
+            out testing infrastructure. Bjet was not designed to be testable in
+            this way so I had to parse a lot of text files to get the data. By
+            making a few good abstractions I was able to keep my code readable
+            and extensible. 
         </article>
         </div>
         <div class="footer">

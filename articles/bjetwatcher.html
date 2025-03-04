@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="bjethtml" lang="en">
+    <head>
+        <title>aadanen.dev</title>
+        <link rel="stylesheet" href="../main.css"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body class="articlebody">
+        <script>0</script>
+        <div class="navbar">
+            <a href="../index.html">home</a><a href="../projects.html" style="" >projects</a><a href="" style="color: #a52a2a" >bjetwatcher</a>
+        </div>
+        <div class="article_container">
+        <article>
+            TLDR: If my code fails to detect a rare astrophysical event, we 
+            will have to wait ~1-2 years for another chance, and Dr. Hervet 
+            misses out on a $98,000 grant.
+            <h3>Why did I do it?</h3>
+            Blazars flare only once every year or two. By constantly monitoring
+            the energy output, we can anticipate one of these rare events. By 
+            catching a flare early, Dr. Hervet can trigger a Target of 
+            Opportunity request to several telescopes to set aside all other 
+            observations and immediately focus on Mrk421. This focus 
+            would gather in depth data on Blazar behavior during a flare, 
+            which currently doesn't exist. 
+            <h3>What did I accomplish?</h3>
+            I wrote a python script that gathers data from 3 different 
+            telescopes: <a href="https://veritas.sao.arizona.edu/" 
+                           target="_blank" rel="noopener noreferrer">
+              VERITAS</a>, 
+                      <a 
+                href="https://swift.gsfc.nasa.gov/about_swift/xrt_desc.html" 
+                           target="_blank" rel="noopener noreferrer">
+                        SWIFT-XRT</a>, and 
+                      <a href="http://maxi.riken.jp/top/index.html" 
+                           target="_blank" rel="noopener noreferrer">
+                        MAXI-RIKEN</a>.
+              Then, it analyzes the data to detect if a flare is about
+            to occur, and if a flare is detected, it composes and sends an alert
+            email.
+            <h3>What did I learn?</h3>
+            The biggest challenge I am currently facing is that my code is 
+            actually important. If it fails for some reason and we miss a 
+            flare, we might have to wait years for another oppurtunity. I dealt
+            with this in several ways. Throughout the project, I sought to keep
+            my code and simple as possible, to minimize errors. In all stages of
+            the program, I focused on error handling, and in the event of a 
+            fatal error I send an emergency email. I also have been personally
+            monitoring the output every day, even if a flare isn't detected,
+            but thats mostly because its kinda neat to see what Mrk421 is doing.
+            It also takes barely any time because I get an email summary every
+            day.
+        </article>
+        </div>
+        <div class="footer">
+            <a href="aaron_danen_resume.pdf" download>resume</a><a target="_blank" rel="noopener noreferrer" href="https://github.com/aadanen">github.com/aadanen</a><p>aadanen@ucdavis.edu</p>
+        </div>
+    </body>
+</html>
+        
