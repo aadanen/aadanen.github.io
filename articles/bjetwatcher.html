@@ -24,14 +24,17 @@
             would gather in depth data on Blazar behavior during a flare, 
             which currently doesn't exist. 
             <h3>What did I accomplish?</h3>
-            I wrote a python script that gathers data from 3 different 
+            I wrote a python script that gathers data from 4 different 
             telescopes: <a href="https://veritas.sao.arizona.edu/" 
                            target="_blank" rel="noopener noreferrer">
               VERITAS</a>, 
                       <a 
                 href="https://swift.gsfc.nasa.gov/about_swift/xrt_desc.html" 
                            target="_blank" rel="noopener noreferrer">
-                        SWIFT-XRT</a>, and 
+                        SWIFT-XRT</a>, 
+                    <a href="https://science.nasa.gov/mission/nicer/",
+                       target="_blank" rel"noopener noreferrer">NICER</a>,
+                    and 
                       <a href="http://maxi.riken.jp/top/index.html" 
                            target="_blank" rel="noopener noreferrer">
                         MAXI-RIKEN</a>.
@@ -39,17 +42,17 @@
             to occur, and if a flare is detected, it composes and sends an alert
             email.
             <h3>What did I learn?</h3>
-            The biggest challenge I am currently facing is that my code is 
-            actually important. If it fails for some reason and we miss a 
-            flare, we might have to wait years for another oppurtunity. I dealt
-            with this in several ways. Throughout the project, I sought to keep
-            my code and simple as possible, to minimize errors. In all stages of
-            the program, I focused on error handling, and in the event of a 
-            fatal error I send an emergency email. I also have been personally
-            monitoring the output every day, even if a flare isn't detected,
-            but thats mostly because its kinda neat to see what Mrk421 is doing.
-            It also takes barely any time because I get an email summary every
-            day.
+            The most challenging part of this project was building a program
+            that has such robust error handling there is no chance of missing 
+            flare. To implement this behavior, I employed several methods: 
+            First, I worked to keep the code as modular and simple as possible.
+            That let me analyze and test every function individually. Second,
+            every function has the ability to return a special error type. In
+            the event of an error, everyone on the mailing list is notified 
+            that what exactly went wrong, so manual observation can be used until
+            the error is resolved. Finally, I have been maintaining the 
+            software to adjust to changes in the APIs or URLs it depends on.
+
         </article>
         </div>
         <div class="footer">
