@@ -241,7 +241,7 @@ article {
 @media (max-width: 850px) {
   .primary_card {
     margin: 1rem;
-    min-width: 328;
+    min-width: 320px;
   }
   .primary_card h1 {
     font-size: 2rem;
@@ -262,6 +262,7 @@ article {
 
 @media (max-width: 600px) {
   .art4 {
+    display: none;
     height: 300px;
     right: 0px;
     top: calc(60% - 3rem);
