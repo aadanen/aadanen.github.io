@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="nicerhtml" lang="en">
+    <head>
+        <title>aadanen.dev</title>
+        <link rel="stylesheet" href="../main.css"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body class="articlebody">
+        <script>0</script>
+        <div class="navbar">
+            <a href="../index.html">home</a><a href="../projects.html" style="" >projects</a><a href="" style="color: #a52a2a" >nicer_analysis</a>
+        </div>
+        <div class="article_container">
+        <article>
+            TLDR: I made an automatic analysis pipeline for the NICER 
+            instrument on the ISS.
+            <h3>Why did I do it?</h3>
+            The Bjetwatcher project required daily updates from NICER, but 
+            there was no existing automatic analysis pipeline. I also already
+            had experience making this sort of product, so I was the right 
+            person for the job. 
+            <h3>What did I accomplish?</h3>
+            The first step of the process is to check if there were any new 
+            observations. I maintain a record of the data that I already have,
+            which includes its observation ID, runtime, mission start time, and
+            other datapoints. I then query NICER's master database, and compare 
+            it with my local data to see if there is anything new.<br><br>
+
+            In the case theres a new observation, it needs to be analyzed. I 
+            use the python subproccess library to run the two preproccessing 
+            programs which are provided by the NICER team. Next, I need to
+            perform spectral analysis using the XSPEC tool. Usually, this is 
+            where an astrophysicist would step in and use their experience
+            analyze the data by hand. This is still required if you need top
+            quality analysis, but I was able to write a bash script that mocks
+            up the inputs for a basic analysis.<br><br>
+
+            I then take the raw
+            data points out of XSPEC to reimplement the post proccessing steps
+            create my own graphics with Matplotlib. I perform unit conversions,
+            rebinning operations, and run an error propogation simulation in
+            order to generate detailed, informative, and beautiful visualizations.
+
+            <h3>What did I learn?</h3>
+            While working with XSPEC, I originally assumed I could perform 
+            the post processing operations inside of XSPEC and then extract 
+            those datapoints and only run the error propogation sim. In order
+            to accomplish this, I depended not only on XSPEC but also on the 
+            work NICER has done to implement their background model within 
+            XSPEC. While trying to figure out some issues with my plots, I
+            discovered what appeared to be a bug within XSPEC. It turned out
+            that NICER's background model had an undocumented interaction with
+            XSPEC that makes one of its fundamental operations "nonphysical" 
+            according to the NICER help desk. I learned a valuable lesson about
+            trusting that software works and the dangers of taking a black-box
+            approach to a fundamental piece of a project. I am unsure if I 
+            could have avoided this problem if I had stronger fundamentals in
+            astrophysics and statistics, or if it was just a landmine edge case that
+            didn't make it into the documentation. 
+        </article>
+        </div>
+        <div class="footer">
+            <a href="aaron_danen_resume.pdf" download>resume</a><a target="_blank" rel="noopener noreferrer" href="https://github.com/aadanen">github.com/aadanen</a><p>aadanen@ucdavis.edu</p>
+        </div>
+    </body>
+</html>
+        
+
