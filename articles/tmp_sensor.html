@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="tmp_sensorhtml" lang="en">
+    <head>
+        <title>aadanen.dev</title>
+        <link rel="stylesheet" href="../main.css"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body class="articlebody">
+        <script>0</script>
+        <div class="navbar">
+            <a href="../index.html">home</a><a href="../projects.html" style="" >projects</a><a href="" style="color: #a52a2a" >sensor</a>
+        </div>
+        <div class="article_container">
+        <article>
+            <h3>Why did I do it?</h3>
+            I wanted to learn about embedded programming and convince my 
+            roomate to let me turn on the AC.
+            <h3>What did I accomplish?</h3>
+            Starting with zero knowledge, I started by researching components. 
+            I had to:<br>
+            1. Measure the temperature in my room<br>
+            2. Digitally process the signal from the sensor<br>
+            3. Display the results<br>
+            After looking online, I decided to purchase an Adafruit Feather
+            M0 Wifi microcontroller. This board only cost me $10 and was very
+            versatile, even though somewhat overkill for my project. One reason
+            I picked it was that it would interface easily with my chosen 
+            screen and temperature sensor. Its I2C data and clock pins were 
+            easily accessible, and I only had to use a couple of pull-up 
+            resistors to tie in my AM2320 digital temperature sensor. To 
+            display the measurements, I wrote some custom "firmware" to read
+            data from the sensor and print text to a screen that was designed 
+            to stack on top of my microcontroller. Overall, this project was
+            pretty much my "Hello World" when it comes to embedded programming.
+            It mirrors the classic project not only in its simplicity, but with
+            how tons of stuff happened under the hood that I don't understand
+            yet.
+            <img src="../img/tmp_sensor.jpg" class="tmpsensor"></img>
+            <h3>What did I learn?</h3>
+            I learned how to research components and read pinout diagrams and
+            spec sheets and then synthesize that knowledge with my 
+            understanding of digital and analog circuits to create a complete
+            device. I also learned to use ArduinoIDE, although that software
+            is designed to be very beginner friendly. Overall I had a lot of
+            fun and the most important thing I learned is that I'm interested
+            in learning more about embedded programming!
+        </article>
+        </div>
+        <div class="footer">
+            <a href="aaron_danen_resume.pdf" download>resume</a><a target="_blank" rel="noopener noreferrer" href="https://github.com/aadanen">github.com/aadanen</a><p>aadanen@ucdavis.edu</p>
+        </div>
+    </body>
+</html>
+        
+
